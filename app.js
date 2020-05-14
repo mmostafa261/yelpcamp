@@ -18,6 +18,7 @@ var express             = require("express"),
 // seedDB();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
+
 mongoose.connect("mongodb+srv://mmostafa:moha231@cluster0-yupjf.mongodb.net/test?retryWrites=true&w=majority", {
 useUnifiedTopology: true,
 useNewUrlParser: true,
