@@ -1,0 +1,19 @@
+<%- include("./partials/header.ejs"); %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;"> Register </h1>
+        <div style="width: 30%; margin: 25px auto;">
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" required name="username" placeholder="username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" required name="password" placeholder="pasword">
+            </div>
+            <div class="form-group">
+                <input type="submit" class = "btn btn-block btn-primary form-control" value="Register">
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("./partials/footer.ejs"); %>
