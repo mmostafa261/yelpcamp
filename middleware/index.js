@@ -10,7 +10,7 @@ middlewareObj.checkCampgroundOwnerShip = function(req, res, next){
                 req.flash("error", "An Error has occured, Please try again later.");
                 res.redirect("/campgrounds");
             }else{
-                if(foundCampground.author._id.equals(req.user._id)){
+                if(foundCampground.author.id.equals(req.user._id)){
                     next();
                 }else {
                     req.flash("error", "You don't have permisson to do that.")
