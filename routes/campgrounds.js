@@ -13,6 +13,7 @@ router.get("/", function(req, res){
             res.redirect("back");
         }
         else{
+            // res.send("test");
             res.render("campgrounds/index", {campgrounds:allCampgrounds}); 
         }
     });
@@ -69,7 +70,8 @@ router.put("/:id", middleware.checkCampgroundOwnerShip, function(req, res){
     var data = {
         name: req.body.name,
         image: req.body.image,
-        description: req.body.description
+        description: req.body.description,
+        price: req.body.price
     };
     Campground.findByIdAndUpdate(req.params.id, data, function(err, updatedCampground){
         if(err){
